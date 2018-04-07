@@ -63,6 +63,7 @@ DEFAULT_USER=daksh
 plugins=(
   git
   command-not-found
+  web-search
 )
 
 source $ZSH/oh-my-zsh.sh
