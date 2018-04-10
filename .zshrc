@@ -97,3 +97,4 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="vim ~/.zshrc"
 alias vrc="vim ~/.vimrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
+alias cls="tput reset"

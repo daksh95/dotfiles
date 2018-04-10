@@ -18,9 +18,11 @@ Plugin 'tmhedberg/matchit'
 Plugin 'scrooloose/nerdtree'
 Plugin 'vim-airline/vim-airline'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'vimwiki/vimwiki'
+Plugin 'janegunn/goyo.vim'
 call vundle#end()
 
 set noundofile
