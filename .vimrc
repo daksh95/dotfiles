@@ -22,7 +22,6 @@ Plugin 'xuhdev/vim-latex-live-preview'
 Plugin 'vim-ctrlspace/vim-ctrlspace'
 " Plugin 'davidhalter/jedi-vim'
 Plugin 'vimwiki/vimwiki'
-Plugin 'janegunn/goyo.vim'
 call vundle#end()
 
 set noundofile
@@ -42,7 +41,12 @@ let g:html_indent_style1 = "inc"
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_autotags = "th,td,tr,tfoot,thead"
 
-set nu
+"Number line settings
+set relativenumber
+set number
+set numberwidth=5
+highlight LineNr term=bold cterm=NONE ctermbg=0 ctermfg=Grey
+
 set wrap
 set linebreak
 let g:ctrlp_map = '<leader>p'
@@ -51,8 +55,7 @@ let maplocalleader = ","
 set hlsearch
 
 map <leader>n :NERDTreeToggle<CR>
-map <c-l> :nohlsearch<CR>
-
+nnoremap <c-l> :nohlsearch<CR>:echo "Search Cleared"<CR>
 
 
 " set statusline+=%*
@@ -67,7 +70,7 @@ let g:instant_markdown_autostart = 0
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 map <leader>md :InstantMarkdownPreview<CR>
 
-imap <Leader><Enter> <Esc>o
+imap <leader><Enter> <Esc>o
 
 map <leader>/ gcc
 inoremap <leader><Space> <Esc>/<++><Enter>"_c4l
@@ -81,6 +84,7 @@ autocmd FileType c nnoremap [20~ :w<CR>:!clear<CR>:!gcc<Space>%<Space>&&<Space>
 
 " C++ Mappings
 autocmd FileType cpp inoremap <leader>i #include<><Enter><Enter><++><Esc>/<><Enter>a
+autocmd FileType cpp nnoremap [20~ :w<CR>:!clear<CR>:!g++<Space>%<Space>&&<Space>./a.out<CR>
 
 " Python Mappings
 autocmd FileType python nnoremap [20~ :w<CR>:!clear<CR>:!python<Space>%<CR>

@@ -10,6 +10,7 @@
 
 ZSH_THEME="agnoster"
 DEFAULT_USER=daksh
+KEYTIMEOUT=10
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -64,6 +65,7 @@ plugins=(
   git
   command-not-found
   web-search
+  # vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -98,3 +100,5 @@ alias zshconfig="vim ~/.zshrc"
 alias vrc="vim ~/.vimrc"
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cls="tput reset"
+alias chrome="google-chrome"
+alias todo="zsh todo.sh"
