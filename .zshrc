@@ -65,6 +65,7 @@ plugins=(
   git
   command-not-found
   web-search
+  # zsh-syntax-highlighting
   # vi-mode
 )
 
@@ -102,3 +103,4 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 alias cls="tput reset"
 alias chrome="google-chrome"
 alias todo="zsh todo.sh"
+alias keybindedit="vim ~/.oh-my-zsh/lib/key-bindings.zsh"
